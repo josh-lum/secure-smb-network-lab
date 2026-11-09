@@ -51,7 +51,7 @@ Defined three layer-2 networks with no host IP and no DHCP, so the firewall cont
 ### 4. Assign interfaces and IPs
 | Interface | NIC | Network | IP |
 |---|---|---|---|
-| WAN | vtnet0 | default (NAT) | DHCP, [192.168.122.93] |
+| WAN | vtnet0 | default (NAT) | DHCP, 192.168.122.93/24 |
 | LAN | vtnet1 | lan | 10.0.10.1/24 |
 | OPT1 (DMZ) | vtnet2 | dmz | 10.0.20.1/24 |
 | OPT2 (Attacker) | vtnet3 | attacker | 10.0.30.1/24 |
