@@ -192,4 +192,23 @@ libvirt's built-in snapshots work on the OPNsense VM (`opnsense-gui-configured`)
 
 ## Diagram
 
-![Network diagram](network-diagram.png)
+![Network diagram]
+```mermaid
+flowchart TB
+    NAT["libvirt default NAT<br/>192.168.122.0/24"]
+    FW["OPNsense firewall<br/>WAN 192.168.122.93<br/>LAN 10.0.10.1 / DMZ 10.0.20.1 / ATK 10.0.30.1"]
+    subgraph LAN["LAN 10.0.10.0/24"]
+        WIN["winserver-dc<br/>Windows Server 2025<br/>10.0.10.178"]
+    end
+    subgraph DMZ["DMZ 10.0.20.0/24"]
+        WEB["ubuntu-web<br/>Ubuntu Server 26.04.1<br/>10.0.20.10"]
+    end
+    subgraph ATK["Attacker 10.0.30.0/24"]
+        KALI["kali-attacker<br/>Kali 2026.3<br/>10.0.30.10"]
+    end
+    NAT --- FW
+    FW --- WIN
+    FW --- WEB
+    FW --- KALI
+    KALI -. "blocked until rules allow it" .-> WEB
+```
