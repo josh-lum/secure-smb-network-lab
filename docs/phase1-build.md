@@ -14,7 +14,7 @@
 - [x] Install KVM and virt-manager
 - [x] Create isolated virtual networks (lan, dmz, attacker)
 - [x] Build OPNsense firewall VM
-- [ ] Assign interfaces and set IP addresses
+- [x] Assign interfaces and set IP addresses
 - [ ] Build Windows Server (Active Directory) on `lan`
 - [ ] Build Ubuntu web server on `dmz`
 - [ ] Build Kali Linux on `attacker`
