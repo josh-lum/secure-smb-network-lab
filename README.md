@@ -1,6 +1,6 @@
 # Securing a Small Business Network: A Hands-On Security Lab
 
-Built, hardened, attacked, and documented a segmented small business network using KVM, pfSense, Active Directory, and Wazuh.
+Built, hardened, attacked, and documented a segmented small business network using KVM, OPNsense, Active Directory, and Wazuh.
 
 ## Overview
 
@@ -12,7 +12,7 @@ A hands-on lab where I build a small business network, harden it, attack it, and
 
 | Component | Role | OS |
 |---|---|---|
-| Firewall | Router/firewall between zones | pfSense/OPNsense |
+| Firewall | Router/firewall between zones | OPNsense |
 | Domain controller | Active Directory, Group Policy | Windows Server |
 | Web server | DMZ host running DVWA | Ubuntu Server |
 | SIEM | Logging and detection | Wazuh |
@@ -44,7 +44,7 @@ Network segmentation, firewall configuration, system hardening (CIS), Active Dir
 
 ## Tools Used
 
-KVM/virt-manager, pfSense, Windows Server, Ubuntu, Kali Linux, Nmap, Wireshark, OpenVAS, Lynis, Wazuh, DVWA
+KVM/virt-manager, OPNsense, Windows Server, Ubuntu, Kali Linux, Nmap, Wireshark, OpenVAS, Lynis, Wazuh, DVWA
 
 ## What I Learned / Challenges
 
