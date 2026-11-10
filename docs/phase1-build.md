@@ -153,7 +153,7 @@ libvirt's built-in snapshots work on the OPNsense VM (`opnsense-gui-configured`)
 **VM booted back into the installer after the install**
 
 - **Cause:** CD-ROM was first in the boot order.
-- **Fix:** [confirm what you did, for example: moved the virtual disk above the CD-ROM.]
+- **Fix:** moved virtual disk to first in order over the CD-ROM
 
 **virt-manager's OS list had no Ubuntu 26.04**
 
